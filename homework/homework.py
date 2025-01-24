@@ -36,7 +36,7 @@
 # Los pasos que debe seguir para la construcción de un modelo de
 # clasificación están descritos a continuación.
 #
-#
+
 # Paso 1.
 # Realice la limpieza de los datasets:
 # - Renombre la columna "default payment next month" a "default".
@@ -46,11 +46,11 @@
 #   de educación, agrupe estos valores en la categoría "others".
 # - Renombre la columna "default payment next month" a "default"
 # - Remueva la columna "ID".
-#
+
 #
 # Paso 2.
 # Divida los datasets en x_train, y_train, x_test, y_test.
-#
+
 #
 # Paso 3.
 # Cree un pipeline para el modelo de clasificación. Este pipeline debe
@@ -62,19 +62,17 @@
 # - Escala la matriz de entrada al intervalo [0, 1].
 # - Selecciona las K columnas mas relevantes de la matrix de entrada.
 # - Ajusta una red neuronal tipo MLP.
-#
-#
+
 # Paso 4.
 # Optimice los hiperparametros del pipeline usando validación cruzada.
 # Use 10 splits para la validación cruzada. Use la función de precision
 # balanceada para medir la precisión del modelo.
-#
+
 #
 # Paso 5.
 # Guarde el modelo (comprimido con gzip) como "files/models/model.pkl.gz".
 # Recuerde que es posible guardar el modelo comprimido usanzo la libreria gzip.
-#
-#
+
 # Paso 6.
 # Calcule las metricas de precision, precision balanceada, recall,
 # y f1-score para los conjuntos de entrenamiento y prueba.
@@ -85,7 +83,7 @@
 #
 # {'dataset': 'train', 'precision': 0.8, 'balanced_accuracy': 0.7, 'recall': 0.9, 'f1_score': 0.85}
 # {'dataset': 'test', 'precision': 0.7, 'balanced_accuracy': 0.6, 'recall': 0.8, 'f1_score': 0.75}
-#
+
 #
 # Paso 7.
 # Calcule las matrices de confusion para los conjuntos de entrenamiento y
@@ -95,4 +93,5 @@
 #
 # {'type': 'cm_matrix', 'dataset': 'train', 'true_0': {"predicted_0": 15562, "predicte_1": 666}, 'true_1': {"predicted_0": 3333, "predicted_1": 1444}}
 # {'type': 'cm_matrix', 'dataset': 'test', 'true_0': {"predicted_0": 15562, "predicte_1": 650}, 'true_1': {"predicted_0": 2490, "predicted_1": 1420}}
-#
+
+ 
